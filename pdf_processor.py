@@ -97,7 +97,7 @@ def check_date(text, x, y):
     # location of date will be between 70% and 80% of sheet to the right
     # and less than 10% of sheet upwards, also it can't have the character '-' in it (. or / are allowed)
     # if 0.64 < x < 0.8 and y < 0.1 and re.search('\d*\d*\d\d', text.strip()) != None and re.search('-', text.strip()) == None and re.search('[a-zA-Z]', text.strip()) == None:
-    if 0.64 < x < 0.8 and y < 0.1 and re.search('\d*\d*\d\d', text.strip()) != None and re.search('-', text.strip()) == None:
+    if 0.64 < x < 0.8 and y < 0.1 and re.search('\d+.{1}\d+.{1}\d+', text.strip()) != None and re.search('-', text.strip()) == None:
         # Return True if a signature exists in this text box, otherwise False
         return True
     else:
